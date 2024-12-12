@@ -1,0 +1,585 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "definitions": {
+    "translation_name": {
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "properties": {
+    "config": {
+      "additionalProperties": false,
+      "properties": {
+        "abort": {
+          "additionalProperties": false,
+          "properties": {
+            "already_configured": {
+              "type": "string"
+            },
+            "no_supported_devices_found": {
+              "type": "string"
+            },
+            "reauth_successful": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "error": {
+          "additionalProperties": false,
+          "properties": {
+            "cannot_connect": {
+              "type": "string"
+            },
+            "invalid_auth": {
+              "type": "string"
+            },
+            "invalid_continent": {
+              "type": "string"
+            },
+            "invalid_country": {
+              "type": "string"
+            },
+            "select_robots": {
+              "type": "string"
+            },
+            "unknown": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "step": {
+          "additionalProperties": false,
+          "properties": {
+            "options": {
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "devices": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "data_description": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "devices": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "user": {
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "continent": {
+                      "type": "string"
+                    },
+                    "country": {
+                      "type": "string"
+                    },
+                    "password": {
+                      "type": "string"
+                    },
+                    "username": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "data_description": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "continent": {
+                      "type": "string"
+                    },
+                    "country": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "user_advanced": {
+              "additionalProperties": false,
+              "properties": {
+                "description": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "entity": {
+      "additionalProperties": false,
+      "properties": {
+        "binary_sensor": {
+          "additionalProperties": false,
+          "properties": {
+            "mop_attached": {
+              "$ref": "#/definitions/translation_name"
+            }
+          },
+          "type": "object"
+        },
+        "button": {
+          "additionalProperties": false,
+          "properties": {
+            "life_span_brush_reset": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "life_span_filter_reset": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "life_span_side_brush_reset": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "relocate": {
+              "$ref": "#/definitions/translation_name"
+            }
+          },
+          "type": "object"
+        },
+        "image": {
+          "additionalProperties": false,
+          "properties": {
+            "map": {
+              "$ref": "#/definitions/translation_name"
+            }
+          },
+          "type": "object"
+        },
+        "number": {
+          "additionalProperties": false,
+          "properties": {
+            "clean_count": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "volume": {
+              "$ref": "#/definitions/translation_name"
+            }
+          },
+          "type": "object"
+        },
+        "select": {
+          "additionalProperties": false,
+          "properties": {
+            "water_amount": {
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "state": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "high": {
+                      "type": "string"
+                    },
+                    "low": {
+                      "type": "string"
+                    },
+                    "medium": {
+                      "type": "string"
+                    },
+                    "ultrahigh": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "work_mode": {
+              "additionalProperties": false,
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "state": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "mop": {
+                      "type": "string"
+                    },
+                    "mop_after_vacuum": {
+                      "type": "string"
+                    },
+                    "vacuum": {
+                      "type": "string"
+                    },
+                    "vacuum_and_mop": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
+        },
+        "sensor": {
+          "additionalProperties": false,
+          "properties": {
+            "battery_level": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "last_cleaning": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "last_error": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "life_span_brush": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "life_span_filter": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "life_span_side_brush": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "stats_area": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "stats_time": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "stats_total_area": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "stats_total_cleanings": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "stats_total_time": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "stats_type": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "wifi_ip": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "wifi_rssi": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "wifi_ssid": {
+              "$ref": "#/definitions/translation_name"
+            }
+          },
+          "type": "object"
+        },
+        "switch": {
+          "additionalProperties": false,
+          "properties": {
+            "advanced_mode": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "carpet_auto_fan_speed_boost": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "clean_preference": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "continuous_cleaning": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "true_detect": {
+              "$ref": "#/definitions/translation_name"
+            }
+          },
+          "type": "object"
+        },
+        "vacuum": {
+          "additionalProperties": false,
+          "properties": {
+            "bot": {
+              "additionalProperties": false,
+              "properties": {
+                "state_attributes": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "fan_speed": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "state": {
+                          "additionalProperties": false,
+                          "properties": {
+                            "max": {
+                              "type": "string"
+                            },
+                            "max_plus": {
+                              "type": "string"
+                            },
+                            "normal": {
+                              "type": "string"
+                            },
+                            "quiet": {
+                              "type": "string"
+                            }
+                          },
+                          "type": "object"
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "last_error": {
+                      "$ref": "#/definitions/translation_name"
+                    },
+                    "rooms": {
+                      "$ref": "#/definitions/translation_name"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "carpet_auto_fan_speed_boost": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "clean_preference": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "continuous_cleaning": {
+              "$ref": "#/definitions/translation_name"
+            },
+            "true_detect": {
+              "$ref": "#/definitions/translation_name"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "issues": {
+      "additionalProperties": false,
+      "properties": {
+        "deprecated_integration_issue": {
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "deprecated_service_refresh": {
+          "additionalProperties": false,
+          "properties": {
+            "fix_flow": {
+              "additionalProperties": false,
+              "properties": {
+                "step": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "confirm": {
+                      "additionalProperties": false,
+                      "properties": {
+                        "description": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "options": {
+      "additionalProperties": false,
+      "properties": {
+        "abort": {
+          "additionalProperties": false,
+          "properties": {
+            "cannot_connect": {
+              "type": "string"
+            },
+            "invalid_auth": {
+              "type": "string"
+            },
+            "no_supported_devices_found": {
+              "type": "string"
+            },
+            "unknown_get_devices": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "error": {
+          "additionalProperties": false,
+          "properties": {
+            "select_robots": {
+              "type": "string"
+            },
+            "unknown": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "step": {
+          "additionalProperties": false,
+          "properties": {
+            "init": {
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "devices": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                },
+                "data_description": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "devices": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "selector": {
+      "additionalProperties": false,
+      "properties": {
+        "refresh_category": {
+          "additionalProperties": false,
+          "properties": {
+            "options": {
+              "additionalProperties": false,
+              "properties": {
+                "battery": {
+                  "type": "string"
+                },
+                "clean_logs": {
+                  "type": "string"
+                },
+                "error": {
+                  "type": "string"
+                },
+                "fan_speed": {
+                  "type": "string"
+                },
+                "life_spans": {
+                  "type": "string"
+                },
+                "map": {
+                  "type": "string"
+                },
+                "rooms": {
+                  "type": "string"
+                },
+                "stats": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "water": {
+                  "type": "string"
+                }
+              },
+              "type": "object"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    },
+    "services": {
+      "additionalProperties": false,
+      "properties": {
+        "refresh": {
+          "additionalProperties": false,
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "fields": {
+              "additionalProperties": false,
+              "properties": {
+                "category": {
+                  "additionalProperties": false,
+                  "properties": {
+                    "description": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              },
+              "type": "object"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "type": "object"
+    }
+  },
+  "type": "object"
+}
